@@ -1,0 +1,50 @@
+<CodeGen>
+
+	<Namespace>alby.pantheon.codegen</Namespace>
+	<ResourceNamespace>alby.pantheon.codegen</ResourceNamespace>
+
+	<Directory>c:\albyStuff\development\alby.pantheon.2015\alby.pantheon.codegen</Directory>
+	<ConnectionString>Data Source=localhost;Initial Catalog=pantheon;Network Library=DBMSSOCN;Integrated Security=SSPI;</ConnectionString>
+
+	<ConcurrencyColumn>update_date</ConcurrencyColumn>
+
+	<PrefixObjectsWithSchema></PrefixObjectsWithSchema>
+
+	<!-- ########################################################################################################## -->
+
+	<UnitTest>
+		<Namespace>alby.pantheon.codegen.test</Namespace>
+		<Directory>c:\albyStuff\development\alby.pantheon.2015\alby.pantheon.codegen.test\CodeGenUnitTest</Directory>
+		<TableNamespace>alby.pantheon.codegen.table</TableNamespace>
+		<TableNamespacePrefix>t</TableNamespacePrefix>
+	</UnitTest>
+
+	<!-- ########################################################################################################## -->
+
+	<Database SubDirectory="database" >
+	</Database>
+
+	<!-- ########################################################################################################## -->
+	
+	<Tables SubDirectory="table" >
+	</Tables>
+
+	<!-- ########################################################################################################## -->
+
+	<Views SubDirectory="view" >
+	</Views>
+
+	<!-- ########################################################################################################## -->
+
+	<Queries SubDirectory="query" >
+	</Queries>
+
+	<!-- ########################################################################################################## -->
+
+	<StoredProcs SubDirectory="storedProcedure" >
+	</StoredProcs>
+	
+	<!-- ########################################################################################################## -->
+
+</CodeGen>
+

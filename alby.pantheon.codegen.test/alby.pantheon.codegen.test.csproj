@@ -49,8 +49,25 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="alby.codegen.runtime.2015, Version=1.0.4464.32877, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\alby.codegen.2015\bin\alby.codegen.runtime.2015.dll</HintPath>
+    </Reference>
+    <Reference Include="alby.core.2015">
+      <HintPath>..\..\alby.codegen.2015\bin\alby.core.2015.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\alby.codegen.2015\bin\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\alby.codegen.2015\bin\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +75,135 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Address.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Centre.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Chain.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Communication.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.ConsumerPriceIndexRentReview.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.CostCentreOutgoing.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.CostCentreOutgoingArchive.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.CostCentreStage.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Document.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.dtproperties.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Email.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.ExpenseDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.FitoutDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.FixedIncreaseRentReview.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Franchise.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.IDGenerator.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Lease.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.LeaseAdministration.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.LeaseComment.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.LeaseCondition.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.LeaseExecutive.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.LeaseGuarantor.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.LeaseType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Lessee.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.LogEntry.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Party.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.PaymentType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Precinct.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.RDMFeeParam.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.RentDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.RentReview.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.RentReviewType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.SalesCategory.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Sector.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.ShopType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Solicitor.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.SolicitorWebService.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.Staff.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.SurrenderDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Assert.VacantPossessionDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.AssertObjectsAfterInsert.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.AssertObjectsAfterUpdate.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.AssertObjectsNew.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.CodegenRunTimeSettings.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.DeleteObjects.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Address.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Centre.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Chain.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Communication.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.ConsumerPriceIndexRentReview.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.CostCentreOutgoing.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.CostCentreOutgoingArchive.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.CostCentreStage.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Document.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.dtproperties.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Email.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.ExpenseDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.FitoutDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.FixedIncreaseRentReview.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Franchise.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.IDGenerator.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Lease.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.LeaseAdministration.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.LeaseComment.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.LeaseCondition.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.LeaseExecutive.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.LeaseGuarantor.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.LeaseType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Lessee.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.LogEntry.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Party.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.PaymentType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Precinct.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.RDMFeeParam.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.RentDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.RentReview.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.RentReviewType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.SalesCategory.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Sector.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.ShopType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Solicitor.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.SolicitorWebService.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.Staff.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.SurrenderDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.Populate.VacantPossessionDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateObjectsForInsert.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateObjectsForUpdate.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Address.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Centre.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Chain.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Communication.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.ConsumerPriceIndexRentReview.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.CostCentreOutgoing.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.CostCentreOutgoingArchive.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.CostCentreStage.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Document.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.dtproperties.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Email.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.ExpenseDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.FitoutDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.FixedIncreaseRentReview.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Franchise.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.IDGenerator.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Lease.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.LeaseAdministration.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.LeaseComment.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.LeaseCondition.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.LeaseExecutive.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.LeaseGuarantor.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.LeaseType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Lessee.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.LogEntry.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Party.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.PaymentType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Precinct.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.RDMFeeParam.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.RentDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.RentReview.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.RentReviewType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.SalesCategory.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Sector.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.ShopType.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Solicitor.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.SolicitorWebService.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.Staff.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.SurrenderDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.PopulateOverride.VacantPossessionDetail.cs" />
+    <Compile Include="CodeGenUnitTest\CodeGenUnitTestClass.State.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
